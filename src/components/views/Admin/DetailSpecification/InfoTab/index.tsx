@@ -1,3 +1,3 @@
-import InfoTab from "./infoTab";
+import InfoTab from "./InfoTab";
 
 export default InfoTab;
