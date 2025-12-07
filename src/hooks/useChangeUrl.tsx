@@ -11,8 +11,8 @@ const useChangeUrl = () => {
   const currentPage = router.query.page;
   const currentSearch = router.query.search;
   const currentCategory = router.query.category;
-  const currentIsOnline = router.query.isOnline;
-  const currentIsFeatured = router.query.isFeatured;
+  const currentSpecification = router.query.specification;
+  const currentIsSuperior = router.query.isSuperior;
 
   const setUrl = () => {
     router.replace({
@@ -30,8 +30,8 @@ const useChangeUrl = () => {
         limit: currentLimit || LIMIT_DEFAULT,
         page: currentPage || PAGE_DEFAULT,
         category: currentCategory || "",
-        isOnline: currentIsOnline || "",
-        isFeatured: currentIsFeatured || "",
+        specification: currentSpecification || "",
+        isSuperior: currentIsSuperior || "",
       },
     });
   };
@@ -66,21 +66,21 @@ const useChangeUrl = () => {
     });
   };
 
-  const handleChangeIsOnline = (isOnline: string) => {
+    const handleChangeSpecification = (specification: string) => {
     router.push({
       query: {
         ...router.query,
-        isOnline,
+        specification,
         page: PAGE_DEFAULT,
       },
     });
   };
 
-  const handleChangeIsFeatured = (isFeatured: string) => {
+  const handleChangeIsSuperior = (isSuperior: string) => {
     router.push({
       query: {
         ...router.query,
-        isFeatured,
+        isSuperior,
         page: PAGE_DEFAULT,
       },
     });
@@ -121,11 +121,11 @@ const useChangeUrl = () => {
 
     setUrlExplore,
     currentCategory,
-    currentIsFeatured,
-    currentIsOnline,
+    currentSpecification,
+    currentIsSuperior,
     handleChangeCategory,
-    handleChangeIsFeatured,
-    handleChangeIsOnline,
+    handleChangeSpecification,
+    handleChangeIsSuperior,
   };
 };
 

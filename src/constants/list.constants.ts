@@ -12,7 +12,7 @@ const DELAY = 1000;
 
 const LIMIT_BANNER = 5;
 const LIMIT_CATEGORY = 8;
-const LIMIT_EVENT = 4;
+const LIMIT_MATERIAL = 4;
 
 export {
   DELAY,
@@ -21,5 +21,5 @@ export {
   PAGE_DEFAULT,
   LIMIT_BANNER,
   LIMIT_CATEGORY,
-  LIMIT_EVENT,
+  LIMIT_MATERIAL,
 };

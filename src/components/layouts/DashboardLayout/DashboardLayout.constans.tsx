@@ -44,22 +44,16 @@ const SIDEBAR_ADMIN = [
     icon: <FaDna  />,
   },
   {
-    key: "question",
-    label: "Question",
-    href: "/admin/question",
-    icon: <MdQuestionAnswer />,
-  },
-  {
     key: "rule",
     label: "Rule",
     href: "/admin/rule",
     icon: <FaPuzzlePiece />,
   },
   {
-    key: "consultation-all",
-    label: "All Consultations",
-    href: "/admin/consultation",
-    icon: <FaWindowRestore  />,
+    key: "question",
+    label: "Question",
+    href: "/admin/question",
+    icon: <MdQuestionAnswer />,
   },
   {
     key: "banner",

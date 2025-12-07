@@ -1,3 +1,3 @@
-// import DetailCategory from "./DetailCategory";
+import DetailCategory from "./DetailCategory";
 
-// export default DetailCategory;
+export default DetailCategory;
