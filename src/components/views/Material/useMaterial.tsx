@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-const usMaterial = () => {
+const useMaterial = () => {
   const router = useRouter();
   const [selectedId, setSelectedId] = useState<string>("");
   const {
@@ -50,4 +50,4 @@ const usMaterial = () => {
   };
 };
 
-export default usMaterial;
+export default useMaterial;
