@@ -1,15 +1,12 @@
 import DashboardLayout from "@/components/layouts/DashboardLayout";
-import Dashboard from "@/components/views/Member/Dashboard/Dashboard";
+import HistoryConsultation from "@/components/views/Member/History";
 
-const HistoryMemberPage = () => {
-    return (
-        <DashboardLayout 
-            title="History Consultation" 
-            description="Page to view and manage consultation history"
-            type="member">
-            <Dashboard/>
-        </DashboardLayout>
-    );
+const HistoryConsultationPage = () => {
+  return (
+    <DashboardLayout title="Consultation History" type="member">
+      <HistoryConsultation />
+    </DashboardLayout>
+  );
 };
 
-export default HistoryMemberPage;
+export default HistoryConsultationPage;
