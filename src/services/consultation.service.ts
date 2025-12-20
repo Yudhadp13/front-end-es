@@ -9,28 +9,21 @@ import {
 } from "@/types/Consultation";
 
 const consultationServices = {
-  // =========================
-  // START NEW SESSION
-  // =========================
+  // mulai sesi baru
   startSession: () =>
     instance.post<IStartSessionResponse>(`${endpoint.CONSULTATION}/start`),
 
-  // =========================
-  // ANSWER QUESTION
-  // =========================
+  // jawaban pertanyaan
   answerQuestion: (sessionId: string, optionValue: string) =>
     instance.post<any>(`${endpoint.CONSULTATION}/answer`, {
       sessionId,
       optionValue,
     }),
 
-  // =========================
-  // GET HISTORY WITH PAGINATION
-  // =========================
+  // ambil data history dari pagination
   getHistory: (params?: string) =>
       instance.get(`${endpoint.CONSULTATION}?${params || ""}`),
 
-    // GET /consultation/:id  <-- IMPORTANT for robust QuestionFlow
   getSessionDetail: (sessionId: string) =>
     instance.get<any>(`${endpoint.CONSULTATION}/${sessionId}`),
 };

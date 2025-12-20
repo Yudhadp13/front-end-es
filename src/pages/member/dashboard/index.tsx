@@ -4,8 +4,7 @@ import Dashboard from "@/components/views/Member/Dashboard/Dashboard";
 const DashboardMemberPage = () => {
     return (
         <DashboardLayout 
-            title="Dashboard" 
-            description="Dashboard member FDP Expert System"
+            title="Dashboard User" 
             type="member">
             <Dashboard/>
         </DashboardLayout>

@@ -14,7 +14,16 @@ import { MdOutlineRecommend } from "react-icons/md";
 import { VscTag } from "react-icons/vsc";
 import { FaBattleNet } from "react-icons/fa6";
 
+import { Button } from "@nextui-org/react";
+import { useRouter } from "next/router";
+import { MdOutlineQuiz } from "react-icons/md";
+
 const DetailMaterial = () => {
+  const router = useRouter();
+
+  const handleStartConsultation = () => {
+  router.push("/member/consultation/start");
+  };
   const {
     dataMaterial,
     dataPlatforms,
@@ -134,10 +143,33 @@ const DetailMaterial = () => {
           </Tabs>
         </div>
 
-        {/* RIGHT CONTENT – bisa kosong dulu / tambahkan sesuatu nanti */}
+        {/* RIGHT CONTENT */}
         <div className="w-full lg:w-2/6">
-          {/* Optional section seperti cart atau rekomendasi */}
+          <div className="lg:sticky lg:top-24">
+            <Card className="p-5 shadow-md border border-default-200">
+              <div className="flex items-center gap-2 mb-3">
+                <MdOutlineQuiz size={22} className="text-primary" />
+                <h3 className="text-lg font-semibold">
+                  Bingung Menentukan Material?
+                </h3>
+              </div>
+
+              <p className="text-sm text-foreground-500 mb-4">
+                Gunakan fitur konsultasi untuk mendapatkan rekomendasi material
+                cetak yang paling sesuai dengan kebutuhan Anda.
+              </p>
+
+              <Button
+                color="primary"
+                className="w-full font-semibold"
+                onPress={handleStartConsultation}
+              >
+                Mulai Konsultasi Sekarang
+              </Button>
+            </Card>
+          </div>
         </div>
+
       </section>
     </div>
   );

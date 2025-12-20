@@ -13,7 +13,7 @@ const ResultPage = () => {
     return (
       <DashboardLayout
         title="Consultation Result"
-        description="Find the best print material based on your consultation session"
+        description="Berikut hasil rekomendasi berdasarkan jawaban konsultasi Anda."
         type="member"
       >
         <p>Loading...</p>
@@ -24,7 +24,7 @@ const ResultPage = () => {
   return (
     <DashboardLayout
       title="Consultation Result"
-      description="Find the best print material based on your consultation session"
+      description="Berikut hasil rekomendasi berdasarkan jawaban konsultasi Anda."
       type="member"
     >
       <ResultConsultation sessionId={sessionId} />

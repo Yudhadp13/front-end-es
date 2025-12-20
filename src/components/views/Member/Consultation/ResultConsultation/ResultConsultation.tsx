@@ -32,11 +32,6 @@ const ResultConsultation = ({ sessionId }: Props) => {
 
   return (
     <div className="p-4 flex flex-col gap-6">
-      {/* Title */}
-      <div>
-        <h1 className="text-2xl font-bold">{RESULT_TITLE}</h1>
-        <p className="text-sm text-gray-600">{RESULT_DESCRIPTION}</p>
-      </div>
 
       {/* Material Result */}
       {material ? (
@@ -46,12 +41,13 @@ const ResultConsultation = ({ sessionId }: Props) => {
           </CardHeader>
           <CardBody>
             <div className="flex flex-col gap-3">
-              <img
-                src={material.banner}
-                alt={material.name}
-                className="w-full max-h-64 object-cover rounded-lg"
-              />
-
+              <div className="aspect-video w-full overflow-hidden rounded-lg">
+                <img
+                  src={material.banner}
+                  alt={material.name}
+                  className="h-full w-full object-cover"
+                />
+              </div>
               <h2 className="text-xl font-bold">{material.name}</h2>
               <p className="text-gray-600">{material.description}</p>
             </div>
@@ -90,23 +86,27 @@ const ResultConsultation = ({ sessionId }: Props) => {
       {/* Platforms */}
       {platforms.length > 0 && (
         <Card>
-          <CardHeader className="text-lg font-semibold">
+          <CardHeader className="text-lg font-semibold border-b">
             Platform Pemesanan
           </CardHeader>
 
-          <CardBody className="flex flex-col gap-3">
-            {platforms.map((platform) => (
-              <Button
-                key={platform._id}
-                as="a"
-                href={platform.url}
-                target="_blank"
-                className="bg-blue-600 text-white"
-              >
-                Pesan via {platform.name}
-              </Button>
-            ))}
-          </CardBody>
+      <CardBody className="flex flex-wrap gap-3">
+        {platforms.map((platform) => (
+          <Button
+            key={platform._id}
+            as="a"
+            href={platform.url}
+            target="_blank"
+            radius="md"
+            size="sm"
+            variant="bordered"
+            className="border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition"
+          >
+            Pesan via {platform.name}
+          </Button>
+        ))}
+      </CardBody>
+
         </Card>
       )}
 

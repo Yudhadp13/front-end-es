@@ -1,8 +1,6 @@
 import { DateValue } from "@nextui-org/react";
 
-// =======================
-// QUESTION
-// =======================
+// pertanyaan
 interface IQuestionOption {
   label: string;
   value: string;
@@ -17,9 +15,7 @@ interface IQuestion {
   options?: IQuestionOption[];
 }
 
-// =======================
-// PLATFORM
-// =======================
+// platform order
 interface IPlatform {
   _id?: string;
   name?: string;
@@ -27,9 +23,7 @@ interface IPlatform {
   materials?: string[];
 }
 
-// =======================
-// MATERIAL (simple for result)
-// =======================
+// material buat hasil konsul
 interface IMaterialResult {
   _id?: string;
   name?: string;
@@ -38,9 +32,7 @@ interface IMaterialResult {
   banner?: string;
 }
 
-// =======================
-// START SESSION RESPONSE
-// =======================
+// start konsul respon
 interface IStartSessionResponse {
     meta: {
     status: number;
@@ -52,9 +44,7 @@ interface IStartSessionResponse {
   question: IQuestion;
 }
 
-// =======================
-// ANSWER SESSION RESPONSE
-// =======================
+// jawaban konsul respon
 interface IAnswerSessionResponse {
   finished: boolean;
   question?: IQuestion;
@@ -62,9 +52,7 @@ interface IAnswerSessionResponse {
   platforms?: IPlatform[];
 }
 
-// =======================
-// HISTORY SESSION
-// =======================
+// history consul
 interface IQuestionHistory {
   question: string | IQuestion;
   optionLabel: string;
@@ -82,9 +70,7 @@ interface IConsultationHistory {
   updatedAt?: string | DateValue;
 }
 
-// =======================
-// HISTORY PAGINATION RESPONSE
-// =======================
+// history pagination respon
 interface IConsultationHistoryPagination {
   data: IConsultationHistory[];
   pagination: {
@@ -102,7 +88,7 @@ interface IAnswerSessionPayload {
 interface ISessionDetail {
   _id?: string;
   user?: string;
-  answers?: string[]; // specification ids
+  answers?: string[]; 
   currentQuestion?: IQuestion | null;
   result?: IMaterialResult | null;
   status?: string;
