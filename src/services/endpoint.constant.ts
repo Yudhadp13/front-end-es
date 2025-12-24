@@ -9,6 +9,7 @@ const endpoint = {
   RULE: "/rules",
   QUESTION: "/questions",
   CONSULTATION: "/consultation",
+  ADMIN: "/admin",
 };
 
 export default endpoint;

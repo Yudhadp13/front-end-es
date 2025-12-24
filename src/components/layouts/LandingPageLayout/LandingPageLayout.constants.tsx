@@ -9,6 +9,7 @@ import {
 const NAV_ITEMS = [
   { label: "Home", href: "/" },
   { label: "Explore", href: "/material" },
+  { label: "Consultation", href: "/member/consultation" },
 ];
 
 const BUTTON_ITEMS = [
