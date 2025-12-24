@@ -124,7 +124,7 @@ const LandingPageLayoutNavbar = () => {
               <DropdownMenu>
                 <DropdownItem
                   key="admin"
-                  href="/admin/material"
+                  href="/admin/dashboard"
                   className={cn({
                     hidden: dataProfile?.role !== "admin",
                   })}
